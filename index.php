@@ -34,7 +34,7 @@
     <div class="first_window">
         <div class="first_window_content">
             <div class="game_name">Cursor Master</div>
-            <div class="play_button" onclick="togleFullScreen()">PLAY</div><br>
+            <div class="play_button" onclick="toggleFullScreen()">PLAY</div><br>
             <div class="rules">
                 How to Play :<br>
                 Rapidly click on the circles.<br>
@@ -169,7 +169,6 @@
                 $('.game_over_window').css("display", "block");
                 $('.your_score').children().text(totalPoints);
                 var score = totalPoints
-                console.log(score)
                 $.ajax({
                     type: "post",
                     url: "index.php",
@@ -188,7 +187,6 @@
 
     $(".game_base").click(function (e) {
     if (!event.target.matches(".ball_1, .ball_2, .ball_3, .ball_4, .ball_5")) {
-        console.log("first")
       if(totalPoints > 1000){
           totalPoints = totalPoints - 1000;
           $('.total_points').text(totalPoints);
