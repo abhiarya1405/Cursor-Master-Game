@@ -1,0 +1,186 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(146, 207, 24);
+    overflow: hidden;
+    user-select: none;
+}
+.display_error{
+    display: none;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.display_error_msg{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: fit-content;
+    text-align: center;
+    font-size: 40px;
+    color: #badd70;
+    letter-spacing: 3px;
+    font-weight: bold;
+    max-width: 500px;
+}
+.first_window{
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    /* display: none; */
+}
+.highscore{
+    position: fixed;
+    top: 10px;
+    left: 20px;
+    color: #fffc00;
+    font-size: 20px;
+}
+.first_window_content{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: fit-content;
+    width: 1000px;
+}
+.game_name{
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 25px;
+    letter-spacing: 40px;
+    color: #ebe8e8;
+}
+.play_button{
+    text-align: center;
+    padding: 15px 20px;
+    background-color: rgb(21 212 46);
+    color: rgb(89 0 255);
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 3px 3px 10px grey;
+    letter-spacing: 3px;
+    font-size: 25px;
+    width: 100px;
+    margin: 20px auto;
+    transition: all 0.5s;
+}
+.play_button:hover{
+    background-color: rgb(43, 255, 0);
+    box-shadow: 1px 1px 5px grey;
+}
+.rules{
+    text-align: center;
+    color: #56b95f;
+    font-size: 18px;
+    line-height: 28px;
+}
+.game_base{
+    height: 100vh;
+    width: 100vw;
+}
+.timer{
+    color: rgb(8, 74, 255);
+    font-size: 30px;
+    position: fixed;
+    left: 20px;
+    top: 10px;
+    font-weight: bold;
+    z-index: 1;
+}
+.total_points{
+    color: rgb(8, 74, 255);
+    font-size: 40px;
+    position: fixed;
+    right: 20px;
+    top: 10px;
+    z-index: 1;
+}
+.ball_1, .ball_2, .ball_3, .ball_4, .ball_5{
+    display: none;
+    position: absolute;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 5px;
+    height: 5px;
+    background-color: rgb(172, 90, 90);
+}
+.ball_1:hover, .ball_2:hover, .ball_3:hover, .ball_4:hover, .ball_5:hover{
+    background-color: rgb(224, 44, 44);
+}
+.game_over_window{
+    display: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+}
+.game_over{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    height: 200px;
+    width: 500px;
+    text-align: center;
+    z-index: 4;
+}
+.game_over_head{
+    display: inline-block;
+    font-size: 40px;
+    width: 100%;
+    font-weight: bold;
+    padding: 10px 20px;
+    color: #ffffff;
+    background-color: #14c118;
+    margin: 20px auto;
+    box-sizing: border-box;
+}
+.your_score{
+    font-size: 25px;
+    color: white;
+}
+.play_again{
+    background-color: rgba(0, 255, 255, 0.726);
+    box-sizing: border-box;
+    padding: 10px 20px;
+    margin: 20px auto;    
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 2px 2px 12px #999999; 
+    width: fit-content;
+    transition: all 0.5s;
+}
+.play_again:hover{
+    background-color: aqua;
+    box-shadow: 1px 1px 10px #999999;
+}
+
+
+@media  screen and (max-width: 1050px) {
+    .first_window_content{
+        width: 300px;
+    }
+    .game_name{
+        letter-spacing: 3px;
+        font-size: 35px;
+    }
+    .game_over{
+        width: 300px;
+    }
+    .game_over_head{
+        width: 280px;
+        font-size: 30px;
+    }
+}
